@@ -1,3 +1,3 @@
 # Team 17
 
-#butts
+Team members: Shawn, Bryan, Dan
