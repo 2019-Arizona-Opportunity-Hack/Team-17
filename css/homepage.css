@@ -1,0 +1,27 @@
+.homepage_wrapper {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+}
+
+.homepage_container {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image_container {
+  position: relative;
+  max-width: 320px;
+}
+
+form#request_need {
+  display: flex;
+  justify-content: center;
+}
+

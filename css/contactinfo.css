@@ -1,0 +1,57 @@
+.contactinfo_wrapper {
+  margin-top: 40px;
+}
+
+.contactinfo_container {
+  display: flex;
+  justify-content: center;
+}
+
+.contactinfo_container form {
+  font-size: 20px;
+  max-width: 280px;
+}
+
+.contactinfo_container form .row_container {
+  margin-bottom: 10px;
+}
+
+.contactinfo_container form label {
+  min-width: 100px;
+}
+
+.contactinfo_container input[type="text"],
+.contactinfo_container input[type="email"],
+.contactinfo_container input[type="tel"] {
+  background: #eee;
+  border: #ddd;
+  width: 100%;
+  padding: 7px 13px;
+}
+
+.contactinfo_container form .row_container:nth-child(7) {
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.contactinfo_container form .row_container:last-child {
+  justify-content: center;
+}
+
+.contactinfo_container #zipcode,
+.contactinfo_container #city,
+.contactinfo_container #state {
+  max-width: 122px;
+}
+
+.contactinfo_container input[type="submit"] {
+  margin-top: 20px;
+  width: 150px;
+}
+
+.contactinfo_container #category {
+  width: 100%;
+  background: #eee;
+  padding: 7px 10px;
+  border: none;
+}

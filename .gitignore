@@ -1,0 +1,6 @@
+node_modules
+package-lock.json
+
+# browserify output files
+html/main.js
+html/css/style.css

@@ -1,0 +1,71 @@
+.login_wrapper, .login_wrapper * {
+  font-size: 20px;
+}
+
+.login_wrapper {
+  display: flex;
+}
+.login_wrapper, .login_container {
+  transition: all 250ms ease-in-out;
+}
+
+@media (min-width: 640px) {
+  .login_wrapper {
+    justify-content: center;
+  }
+}
+
+.login_wrapper form > * + * {
+  margin-top: 16px;
+}
+
+.login_wrapper .input-block input {
+  margin-top: 8px;
+}
+
+.login_wrapper label,
+.login_wrapper input {
+  display: block;
+}
+
+.login_wrapper label:hover {
+  cursor: pointer;
+}
+
+.login_wrapper input {
+  background-color: rgba(255,255,255, 0.9);
+  border: #CCCCCC solid 1px;
+  border-radius: 3px;
+  color: #A74687;
+  padding: 12px 8px;
+
+}
+
+.login_wrapper input:not([type=submit]) {
+  width: 100%;
+}
+
+.login_wrapper input:focus,
+.login_wrapper input:hover {
+  border: #A74687 solid 1px;
+}
+
+.login_wrapper input:focus {
+  outline: #A74687 auto 5px;
+}
+
+.login_wrapper input[type=submit] {
+  background-color: #A74687;
+  border: none;
+  box-shadow: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  padding: 12px 24px;
+}
+.login_wrapper input[type=submit]:focus,
+.login_wrapper input[type=submit]:hover {
+  background-color: #FF3A83;
+  border: #A74687 solid 4px;
+  border-radius: 6px;
+}
