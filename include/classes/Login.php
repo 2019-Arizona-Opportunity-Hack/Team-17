@@ -12,12 +12,12 @@ class Login {
 
     echo '<div class="input-block">';
     echo '<label for="email">Email</label>';
-    echo '<input type="email" id="email" name="email" required>';
+    echo '<input type="email" id="email" name="email">';
     echo '</div>';
 
     echo '<div class="input-block">';
     echo '<label for="password">Password</label>';
-    echo '<input type="password" id="password" name="password" required>';
+    echo '<input type="password" id="password" name="password">';
     echo '</div>';
 
     echo '<input type="submit" value="Login">';

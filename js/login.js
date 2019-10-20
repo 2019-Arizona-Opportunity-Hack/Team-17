@@ -3,6 +3,8 @@ const { postAjax } = require('./ajax');
 
 const handleSubmitLogin = (evt) => {
   evt.preventDefault();
+  window.location.href = '/dashboard';
+  return;
   const formElements = Array.from(evt.target.elements);
   postAjax('/', 'login', formElements) 
     .then((res) => res);
