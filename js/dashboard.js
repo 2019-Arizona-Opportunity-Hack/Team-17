@@ -27,6 +27,10 @@ const buildMembersOfCategory = (category, quantity) => {
   const specificUsers = requests.filter((request) => request.category_name === category);
   console.log(specificUsers);
 
+  const $level2_wrapper = document.createElement('div');
+  $level2_wrapper.classList.add('level2_wrapper');
+
+  const $ul = document.createElement('ul');
   specificUsers.forEach((user) => {
     const $li = document.createElement('li');
     const $name = document.createElement('div');
@@ -35,14 +39,80 @@ const buildMembersOfCategory = (category, quantity) => {
     const $anchor = document.createElement('a');
 
     $anchor.href = '#';
-    $anchor.dataset.category = category.replace(' ', '_');
-    $anchor.addEventListener('click', handleClickCategory);
+    $anchor.dataset.full_name = user.full_name.trim().replace(' ', '_');
+    $anchor.addEventListener('click', handleClickUser);
     $div.classList.add('column_container');
 
-    
+    $name.innerText = user.full_name; 
+    $email.innerText = user.email; 
 
+    $div.append($name, $email);
+    $anchor.append($div);
+    $li.append($anchor);
+    $ul.append($li);
   });
- 
+
+  $level2_wrapper.append($level2Category, $ul);
+  $dashboardContainer.append($level2_wrapper);
+
+  
+};
+
+const handleClickUser = (evt) => {
+  evt.preventDefault();
+  const $closestAnchor = evt.target.closest('a'); 
+  const name = $closestAnchor.dataset.full_name.replace('_', ' ');
+
+  buildUser(name);
+}
+
+const buildUser = (name) => {
+
+  const $level2Wrapper = document.querySelector('.level2_wrapper');
+  $level2Wrapper.classList.add('hide');
+
+  const $requests = document.querySelector('#requests');
+  const requests = JSON.parse($requests.innerHTML); 
+
+  const userData = requests.filter((request) => request.full_name === name);
+
+  let phoneNumber = '';
+
+  const $ul = document.createElement('ul');
+  userData.forEach((data) => {
+    Object.keys(data).forEach((label) => {
+      const $li = document.createElement('li');
+      const $label = document.createElement('div');
+      const $value = document.createElement('div');
+      const $columnContainer = document.createElement('div');
+      $label.innerText = label;
+      $value.innerText = data[label];
+      $columnContainer.classList.add('column_container');
+      $columnContainer.append($label, $value);
+      $li.append($columnContainer);
+      $ul.append($li);
+      if (label === 'phone_number') phoneNumber = data[label];
+    });
+  });
+  
+  const $level3Wrapper = document.createElement('div');
+  $level3Wrapper.classList.add('level3_wrapper');
+
+  $level3Wrapper.append($ul);
+
+  const $phone = document.createElement('a');
+  $phone.href = 'tel:' + phoneNumber; 
+  $phone.innerText = phoneNumber;
+  $phone.id = 'callPhone';
+
+  const $phoneDiv = document.createElement('div');
+  $phoneDiv.id = 'callPhoneDiv';
+
+  $phoneDiv.append($phone);
+  
+  const $dashboardContainer = document.querySelector('.dashboard_container');
+  $dashboardContainer.append($level3Wrapper, $phoneDiv);
+
 };
 
 const handleClickCategory = (evt) => {

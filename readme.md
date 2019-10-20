@@ -1,6 +1,4 @@
-# Team 17 Zuri's Circle
-
-Team members: Shawn, Bryan, Dan
+# Zuri's Circle
 
 In CentOS server,
 this node project lives in `/var/www` directory.

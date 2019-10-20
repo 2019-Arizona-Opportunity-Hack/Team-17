@@ -32,7 +32,7 @@ class Dashboard {
   public function getAllCategories() {
     $query = 'SELECT r.*,
       u.email, u.phone_number, u.address,
-      u.city, u.state, u.zipcode
+      u.city, u.state, u.zipcode, RTRIM(CONCAT(first_name, " ", last_name)) as full_name
       FROM request r
       INNER JOIN user u
         ON u.email = r.email

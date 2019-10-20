@@ -19,7 +19,6 @@ img {
 }
 
 .dashboard_wrapper, .login_wrapper {
-  padding: 20px;
   position: relative;
 }
 .dashboard_wrapper::after,

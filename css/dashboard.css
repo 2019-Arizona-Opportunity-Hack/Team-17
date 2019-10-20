@@ -1,0 +1,111 @@
+.dashboard ul, 
+.dashboard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pending_requests_container {
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  margin-top: 5px;
+  font-size: 18px;
+  text-transform: capitalize;
+  box-shadow: 0 0 3px #eacddd;
+  background: #fff;
+}
+
+.pending_requests_container .pending_requests,
+.pending_requests_container .quantity {
+  display: flex;
+  justify-content: center;
+}
+
+.pending_requests_container .quantity {
+  font-size: 30px;
+}
+
+.level1_wrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.level1_wrapper ul > li > a {
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  margin-top: 5px;
+  font-size: 18px;
+  text-transform: capitalize;
+  box-shadow: 0 0 3px #eacddd;
+  background: #fff;
+}
+
+.level1_wrapper ul > li > a > .row_container {
+  justify-content: space-between;
+  font-size: 22px;
+}
+
+.level2_category {
+  text-decoration: none;
+    padding: 20px;
+    background: #fff;
+    display: block;
+    margin-top: 10px;
+}
+
+.dashboard_container ul > li > a {
+  box-shadow: 0 0 9px rgba(0,0,0,0.2);
+  text-decoration: none;
+  padding: 20px;
+  background: #fff;
+  display: block;
+  margin-top: 10px;
+}
+
+.level2_category img {
+  width: 30px;
+}
+
+.level2_category > span {
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.level3_wrapper > ul > li {
+  padding-top: 5px;
+  background: #fff;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 0 9px rgba(0,0,0,0.2);
+  margin-top: 3px;
+}
+
+#callPhoneDiv {
+  height: 60px;
+  font-family: "Open Sans",sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px -1px 16px rgba(0,0,0,0.4);
+}
+
+#callPhone {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 19px;
+  background: #a74687;
+}

@@ -60,10 +60,19 @@ class Thankyou {
     ]);
   }
 
+  public function checkIfUserExists($email) {
+    $query = 'SELECT * FROM user WHERE email = ?';
+    return Functions::select_query($query, [
+      $email
+    ]);
+  }
+
 
   public function run() {
-    $this->createNewContact($_REQUEST);
-    $this->createNewRequest($_REQUEST);
+    if (empty($this->checkIfUserExists($_REQUEST['email']))){
+    	$this->createNewContact($_REQUEST);
+    }
+	$this->createNewRequest($_REQUEST);
     $this->printPage();
   }
 
